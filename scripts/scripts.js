@@ -10,18 +10,18 @@ class Planet{
         this.name = name;
     }
 }
-const sun = { x: 400, y: 300, radius: 30, color: "yellow", name:"sun", depth: 1 };
+const sun = { x: 600, y: 450, radius: 30, color: "yellow", name:"sun", depth: 1 };
 
 const planets = [
     new Planet(50,5,"gray",0.02,0,"mercury"),
     new Planet(80,8,"orange",0.015,0,"venera"),
     new Planet(120,9,"#1E90FF",0.01,0,"earth"),
     new Planet(160,7,"red",0.008,0,"mars"),
-    new Planet(220,20,"#F08080",0.0075,0,"jupiter"),
-    new Planet(280,18,"#FFFFE0",0.007,0,"saturn"),
-    new Planet(320,11,"#E6E6FA",0.0065,0,"uran"),
-    new Planet(360,12,"#6495ED",0.006,0,"neptun"),
-    new Planet(400,4,"cyan",0.0055,0,"pluton"),
+    new Planet(250,20,"#F08080",0.0075,0,"jupiter"),
+    new Planet(350,18,"#FFFFE0",0.007,0,"saturn"),
+    new Planet(420,11,"#E6E6FA",0.0065,0,"uran"),
+    new Planet(500,12,"#6495ED",0.006,0,"neptun"),
+    new Planet(550,4,"cyan",0.0055,0,"pluton"),
 ];
 planets.push(sun);
 
@@ -61,7 +61,7 @@ function drawPlanet(planet) {
     ctx.beginPath();
     // ctx.arc(x, y, planet.radius *(2 + Math.sin(planet.angle))/2, 0, Math.PI * 2);
     // ctx.arc(x, y, planet.radius *(planet.distance*2 + planet.depth)/(2*planet.distance), 0, Math.PI * 2);
-    ctx.arc(x, y, planet.radius*(2+ Math.sin(cameraAngle))/2 *(2 + Math.sin(planet.angle))**(planet.distance/200)/2, 0, Math.PI * 2);
+    ctx.arc(x, y, planet.radius*(2+ Math.sin(cameraAngle))/2 *(2 + Math.sin(planet.angle))**(planet.distance/250)/2, 0, Math.PI * 2);
     ctx.fillStyle = planet.color;
     ctx.fill();
     ctx.closePath();
