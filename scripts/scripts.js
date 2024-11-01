@@ -58,7 +58,9 @@ function drawPlanet(planet) {
     cameraRotate(0);
     const y = sun.y + planet.depth*Math.sin(cameraAngle);
     ctx.beginPath();
-    ctx.arc(x, y, planet.radius *(2 + Math.sin(planet.angle))/2, 0, Math.PI * 2);
+    // ctx.arc(x, y, planet.radius *(2 + Math.sin(planet.angle))/2, 0, Math.PI * 2);
+    // ctx.arc(x, y, planet.radius *(planet.distance*2 + planet.depth)/(2*planet.distance), 0, Math.PI * 2);
+    ctx.arc(x, y, planet.radius *(2 + Math.sin(planet.angle))**(planet.distance/200)/2, 0, Math.PI * 2);
     ctx.fillStyle = planet.color;
     ctx.fill();
     ctx.closePath();
