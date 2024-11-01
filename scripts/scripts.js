@@ -48,7 +48,7 @@ function cameraRotate(mode){
 }
 
 function drawPlanet(planet) {
-    if(planet.name === "sun"){
+    if(!(planet instanceof Planet)){
         drawSun();
         return;
     }
